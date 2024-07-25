@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <form>
+            <input type="text" id="name" placeholder="enter secret name">
+            <button type="submit">Enter</button>
+      </form>
+
+      <script>
+            let form = document.querySelector('form');
+            let name_box = form.querySelector('#name');
+            // let button = form.querySelector('button');
+             let arr = []
+            form.addEventListener("submit", (e)=>{
+                    e.preventDefault();
+                    // let name1 = name_box.value
+                    let obj = {
+                        name: name_box.value
+                    }
+                    arr.push(obj)
+                    let json_obj = JSON.stringify(arr);
+
+                    localStorage.setItem("info", json_obj)
+                    // console.log(name1);
+            })
+      </script>
+</body>
+</html>
+
+
+<!--  js  => browser -->
+
+
+<!-- localstorage => browser  -->
+
+
+<!-- JSON JavaScript Object Notation -->
